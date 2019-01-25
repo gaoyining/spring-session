@@ -51,6 +51,9 @@ import org.springframework.util.ObjectUtils;
  * Configures the basics for setting up Spring Session in a web environment. In order to
  * use it, you must provide a {@link SessionRepository}. For example:
  *
+ * ???Web?????Spring Session?????? ??
+ * ???????????{@link SessionRepository}? ???
+ *
  * <pre>
  * {@literal @Configuration}
  * {@literal @EnableSpringHttpSession}

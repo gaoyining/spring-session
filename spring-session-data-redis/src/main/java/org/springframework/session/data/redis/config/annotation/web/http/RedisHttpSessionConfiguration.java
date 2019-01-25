@@ -106,6 +106,7 @@ public class RedisHttpSessionConfiguration extends SpringHttpSessionConfiguratio
 
 	@Bean
 	public RedisOperationsSessionRepository sessionRepository() {
+		// 创建RedisTemplate
 		RedisTemplate<Object, Object> redisTemplate = createRedisTemplate();
 		RedisOperationsSessionRepository sessionRepository = new RedisOperationsSessionRepository(
 				redisTemplate);

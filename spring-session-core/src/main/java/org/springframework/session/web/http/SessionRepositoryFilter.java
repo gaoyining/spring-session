@@ -86,6 +86,8 @@ public class SessionRepositoryFilter<S extends Session> extends OncePerRequestFi
 
 	/**
 	 * The session repository request attribute name.
+	 *
+	 * ????????????
 	 */
 	public static final String SESSION_REPOSITORY_ATTR = SessionRepository.class
 			.getName();
@@ -225,6 +227,8 @@ public class SessionRepositoryFilter<S extends Session> extends OncePerRequestFi
 		/**
 		 * Uses the {@link HttpSessionIdResolver} to write the session id to the response
 		 * and persist the Session.
+		 *
+		 * ??{@link HttpSessionIdResolver}???ID?????????Session?
 		 */
 		private void commitSession() {
 			HttpSessionWrapper wrappedSession = getCurrentSession();

@@ -55,6 +55,12 @@ import org.springframework.util.Assert;
  * environment, this is typically used in combination with {@link SessionRepositoryFilter}
  * . This implementation supports {@link SessionDeletedEvent} and
  * {@link SessionExpiredEvent} by implementing {@link MessageListener}.
+ *
+ * ??Spring Data?{@link org.springframework.data.redis.core.RedisOperations}???
+ * {@link org.springframework.session.SessionRepository}?
+ * ?Web????????{@link SessionRepositoryFilter}?????
+ * ???????{@link MessageListener}??{@link SessionDeletedEvent}?{@link SessionExpiredEvent}?
+ *
  * </p>
  *
  * <h2>Creating a new instance</h2>
@@ -81,6 +87,8 @@ import org.springframework.util.Assert;
  * The sections below outline how Redis is updated for each operation. An example of
  * creating a new session can be found below. The subsequent sections describe the
  * details.
+ *
+ * ?????????????????Redis? ???????????????? ????????????
  *
  * <pre>
  * HMSET spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe creationTime 1404360000000 maxInactiveInterval 1800 lastAccessedTime 1404360000000 sessionAttr:attrName someAttrValue sessionAttr2:attrName someAttrValue2

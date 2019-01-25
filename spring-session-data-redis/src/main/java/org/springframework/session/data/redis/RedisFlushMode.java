@@ -29,6 +29,9 @@ public enum RedisFlushMode {
 	 * Only writes to Redis when
 	 * {@link SessionRepository#save(org.springframework.session.Session)} is invoked. In
 	 * a web environment this is typically done as soon as the HTTP response is committed.
+	 *
+	 * ?????{@link SessionRepository?save?org.springframework.session.Session?}????Redis?
+	 * ?Web?????????HTTP???????????
 	 */
 	ON_SAVE,
 
@@ -37,6 +40,9 @@ public enum RedisFlushMode {
 	 * {@link SessionRepository#createSession()} will write the session to Redis. Another
 	 * example is that setting an attribute on the session will also write to Redis
 	 * immediately.
+	 *
+	 * ?????Redis? ??
+	 * {@link SessionRepository #createSession??}??????Redis? ????????????????????Redis?
 	 */
 	IMMEDIATE
 }
